@@ -26,7 +26,7 @@ while True:
                                 quote = random.choice(lineList)
                                 tweet_body = "@" + mention.user.screen_name + " " + quote.decode('utf-8')        
                         api.update_status(tweet_body ,mention.id)
-			lastTweet=mention.id
+			lastTweet=str(mention.id)
                         idFile=open("lastID.txt",'w')
                         idFile.write(str(lastTweet))
                         
